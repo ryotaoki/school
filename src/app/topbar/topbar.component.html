@@ -1,87 +1,114 @@
-
 <div class="row mt-5">
 
-    <div class="col col-sm text-center">
-        <a routerLink="/"><i class="fa fa-car"></i></a>
-    </div>
+  <div class="col-3 col-sm-3 text-center">
+    <a routerLink="/"><i class="fa fa-car"></i></a>
+  </div>
 
-   
-
-    <div class="col col-sm ">
-        <div class="dropdown d-flex justify-content-end">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                List
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" routerLink="/" >Home</a>
-                <a class="dropdown-item" routerLink="/details">Product</a>
-                <a class="dropdown-item" routerLink="/details">Product Detail</a>
-                <a class="dropdown-item" href="#">Registration</a>
-                <a class="dropdown-item" href="#">Contact</a>
-
-            </div>
+  <!-- <div class="row"> -->
+    <div class="col-9 col-sm">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">List</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/">Home</a>
+            <a class="dropdown-item" routerLink="/details">Product</a>
+            <a class="dropdown-item" routerLink="/details">Product Detail</a>
+            <a class="dropdown-item" href="#">Registration</a>
+            <a class="dropdown-item" href="#">Contact</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
         </div>
-        
-    </div>
-    <!-- <div class="col col-sm"> -->
-    <div class="row">
-        <div class="col ">
-            <input class="px-5" type="text" name="" id="" placeholder="search">
-        </div>
-        <div class="col">
-            <button>search</button>
-        </div>
-
+        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+        <button>search</button>
+      </div>
 
     </div>
+  <!-- </div> -->
 
 
-    <!-- </div> -->
-   
-        <div class="col-6 col-sm">account</div>
-        <div class="col-6 col-sm">contact</div>
-        <div class="col-6 col-sm"><i class="fas fa-cart-arrow-down"></i></div>
 
-    
-    
+
+
+
+  <!-- <div class="col col-sm ">
+    <div class="dropdown d-flex justify-content-end ">
+      <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        List
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" routerLink="/">Home</a>
+        <a class="dropdown-item" routerLink="/details">Product</a>
+        <a class="dropdown-item" routerLink="/details">Product Detail</a>
+        <a class="dropdown-item" href="#">Registration</a>
+        <a class="dropdown-item" href="#">Contact</a>
+
+      </div>
+    </div>
+
+  </div> -->
+  <!-- <div class="col col-sm"> -->
+  <!-- <div class="row">
+    <div class="col ">
+      <input class="px-5" type="text" name="" id="" placeholder="search">
+    </div>
+    <div class="col">
+      <button>search</button>
+    </div>
+
+
+  </div> -->
+
+
+  <!-- </div> -->
+
+  <div class="col-4 col-sm-1">account</div>
+  <div class="col-4 col-sm-1">contact</div>
+  <div class="col-4 col-sm-1"><i class="fas fa-cart-arrow-down"></i></div>
+
+
+
 
 
 
 </div>
+
+
+
 <div class="row bg-light">
-    <div class="col-12 ">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-0">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/product" routerLinkActive="active">Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/details" routerLinkActive="active">Product Detail</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" routerLinkActive="active">Registration</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" routerLinkActive="active">Contact</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </nav>
+  <div class="col-12 ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-0">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home
+              <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/product" routerLinkActive="active">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/details" routerLinkActive="active">Product Detail</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLinkActive="active">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLinkActive="active">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
 
 
-    </div>
+  </div>
 
 </div>
-
-

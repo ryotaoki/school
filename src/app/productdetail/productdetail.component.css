@@ -3,4 +3,10 @@ img {
 }
 .card{
     height: 250px;
+    width: 300px;
 }
+
+.price{
+    margin-top: 28px;
+}
+
