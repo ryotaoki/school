@@ -9,7 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductdetailComponent } from './productdetail/productdetail.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   { path : '', component : ProductComponent},
@@ -32,7 +32,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
