@@ -1,1 +1,55 @@
-<p>registration works!</p>
+<div class="container">
+    <span *ngIf="userLoggedIn==false">
+ <h4>Please login to your account</h4><br>
+   <div class="cont" *ngIf="newUser===false">
+     <form (ngSubmit)="onLogIn()" >
+        <label for="mailId" name="mailId" placeholder="your mail id">Mail Id</label>
+        <input type="mail" name="mailId" id="mailId"  [(ngModel)]="mailId">
+        <label for="password" name="password" placeholder="your password">Password</label>
+        <input type="password" name="password" id="password" [(ngModel)]="password"><br><br>
+        <input type="submit" value="Submit">
+        <span *ngIf="errorDialogue!=null" style="color: red;">{{errorDialogue}}</span>
+      </form>   
+     <span style="color: white;">new user? <span (click)="signup()"><a style="cursor:pointer ;color:#42f515">Signup here</a></span></span>
+   </div>
+    <div class="cont" *ngIf="newUser===true" >
+        <span style="color: white;">Already having an  account? <span (click)="loginshow()"><a style="cursor:pointer ;color:#42f515">Login here</a></span></span><br>  <br>
+      <form (ngSubmit)="onSave()">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" placeholder="First name.."  [(ngModel)]="firstName">
+        <label for="lastName">Last Name</label>
+        <input type="text"  name="lastName" placeholder="Last name.."  [(ngModel)]="lastName">
+        <label for="mail">Mail</label>
+        <input type="mail" name="mailId" placeholder="Mail id.." [(ngModel)]="mailId">
+        <label for="paswword">Password</label>
+        <input type="password"  name="password" placeholder="Password.." [(ngModel)]="password">
+        <label for="rePassword">Re-Password</label>
+        <input type="password" name="rePassword"placeholder="Re enter paswword.." [(ngModel)]="rePassword">
+        <span *ngIf="rePassword!=null">
+            <span *ngIf="password!=rePassword">password not matching</span>
+        </span>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+</span>
+<span *ngIf="userLoggedIn==true">
+<br><br><br>Hi {{loggedInUser}}&nbsp;&nbsp;
+<br>Thanks for joining us. Please continue shopping.  <a routerLink="/product" >Go to prodcts</a>
+<br><br>
+<div class="cont">
+    Your details:
+    <br>
+    <form >
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" placeholder="First name.."  [(ngModel)]="firstName">
+        <label for="lastName">Last Name</label>
+        <input type="text"  name="lastName" placeholder="Last name.."  [(ngModel)]="lastName">
+        <label for="mail">Mail</label>
+        <input type="mail" name="mailId" placeholder="Mail id.." [(ngModel)]="mailId" disabled>
+    </form>
+</div>
+</span>
+</div>
+

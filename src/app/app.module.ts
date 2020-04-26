@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MessageService } from 'primeng/api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,9 @@ import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path : '', component : ProductComponent},
-  { path : 'details', component : ProductdetailComponent}
+  { path : 'details', component : ProductdetailComponent},
+  { path : 'registration', component : RegistrationComponent},
+  { path : 'contacts', component : ContactComponent},
   
 
 ];
@@ -37,7 +40,7 @@ const appRoutes: Routes = [
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,57 @@
-<p>contact works!</p>
+<div>
+    <br>
+    <h4>Hello, How can we help with?</h4>
+<br>
+<!-- <div style="padding: 2em;">
+    <span>For product related issues,please contact <i>mysiteProduct.com</i></span>
+    <br>
+    <br>
+    <span>For spam and other issue please contact <i>mysiteSpam.com</i></span>
+    <br><br>
+    <span>For any other quries write to mysiteQuries.gmail.com</span>
+    <br><br>
+    or call  <i class="fa fa-phone"> </i>+01399303930
+</div> -->
+<div class="main-block">
+    <form [formGroup]="supportdata" (ngSubmit)="onSubmit()">
+        <span class="banner"><b><i class="fa fa-envelope" aria-hidden="true"></i> Contact Support</b></span>
+       <div class="info">
+            <input class="fname" type="text" name="username" placeholder="Username" [value]="username" required [(ngModel)]="username">
+            <input type="text" name="email" placeholder="Email" [value]="email" required [(ngModel)]="email">
+            <select style="padding: 0px 0px 0px 1em;" name="type" #type formControlName="type">
+                <option value="" disabled>Select Type</option>
+                <option *ngFor="let type of types" [value]="type">{{type}}</option>
+            </select>
+
+            <div *ngIf="submitted" class="invalid-feedback">
+                <p class="validation-error alert alert-danger" style="margin-top: -6px;" >Type is
+                Required!</p>
+            </div>
+            <textarea rows="3" name="description" [(ngModel)]="desc" formControlName="description" placeholder="Detail Description*"
+            [ngClass]="{ 'is-invalid': submitted }" ></textarea>
+            <button type="submit"><b><i class="fa fa-hand-o-right" aria-hidden="true"></i> Send Message</b> </button>
+        </div>
+    </form>
+</div>
+<div class="main-blocks">
+    <div style="padding:13px;background: #0666a3;height: 3em;"><span style="color: white;font-size: 18px;"><i class="fa fa-home fa-lg "></i>&nbsp;&nbsp;&nbsp;Address</span></div>
+ 
+ <br>   <div style="padding-left: 2em;">
+   <!-- <i class="fa fa-circle fa-sm"></i>&nbsp;&nbsp; -->
+   Myoffice
+   <br>
+   <br>
+   <!-- <i class="fa fa-circle fa-sm"></i>&nbsp;&nbsp; -->
+   Ontario
+   <br>
+   <br>
+   <!-- <i class="fa fa-circle fa-sm"></i>&nbsp;&nbsp; -->
+   Canada
+   <br>
+   <br>
+  <i class="fa fa-phone fa-lg "></i> &nbsp;&nbsp;+6190290239023
+   <br>
+   <br>
+ </div>  
+</div>
+</div>

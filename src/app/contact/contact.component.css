@@ -1,0 +1,99 @@
+.main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+    float: left;
+    width: 79em;
+    }
+    .main-blocks {
+        width: 20em;
+        position: relative;
+        top: -24em;
+      
+        float: right;
+        border: double;
+        border-width: thin;
+        }
+    
+    form {
+    padding: 10px;
+    width: 39%;
+    border: 1px solid transparent; 
+    box-shadow: 1px 5px 12px 0 #095484;
+    border-radius: 10px;
+  
+    }
+
+    :disabled{
+        background-color: var(--px-select-background-color, #d8e0e5);
+    }
+
+    /* .fa-envelope {
+    transform: rotate(-20deg);
+    } */
+    /* .fa-at , .fa-mail-bulk{
+    transform: rotate(10deg);
+    } */
+    input, textarea, select {
+    width: calc(100% - 3px);
+    background-color: white;
+    padding: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #a2b4bec4;
+    outline: none;
+    }
+
+    select:hover, input:hover, textarea:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 6px 0 #095484;
+    color: var(--px-input-text-color, #2c404c);     
+      
+    }
+
+    textarea::placeholder {
+    color: rgba(121, 120, 120, 0.699);
+    }
+    
+    button {
+    box-shadow: 1px 5px 12px 0 #095484;
+    margin-left: 32%;
+    padding: 10px;
+    border: none;
+    border-radius: 1px;
+    background: #0666a3;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    }
+
+    .banner {
+    position: relative;
+    height: 70px;
+    width: calc(100% - 3px);
+    margin-bottom: 12px;
+    background-size: cover;
+    display: flex;
+    padding-bottom: 0px;
+    background-color: #0666a3;
+    box-shadow: 0 0 3px 0 #095484;
+    color: #fff;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    }
+
+    button:hover {
+    background: #0893e9;
+    }    
+ 
+    .alert{
+    position: relative;
+    padding: 0.3rem 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.30rem;
+    }
+
