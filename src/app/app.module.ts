@@ -12,10 +12,19 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { SecureComponent } from './secure/secure.component';
+import { PublicComponent } from './public/public.component';
+
+import { ProductlistComponent } from './productlist/productlist.component';
+import { CommonModule } from '@angular/common';
+import { BuyComponent } from './buy/buy.component';
 
 const appRoutes: Routes = [
-  { path : '', component : ProductComponent},
-  { path : 'details', component : ProductdetailComponent},
+  
+  { path : '', component : ProductlistComponent},
+  { path : 'details/title/:t/price/:p/description/:d/quantity/:q' , component : ProductdetailComponent},
+
+  
   { path : 'registration', component : RegistrationComponent},
   { path : 'contacts', component : ContactComponent},
   
@@ -31,7 +40,13 @@ const appRoutes: Routes = [
     ProductComponent,
     ProductdetailComponent,
     RegistrationComponent,
-    ContactComponent
+    ContactComponent,
+    SecureComponent,
+    PublicComponent,
+    
+    ProductlistComponent,
+    
+    BuyComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +54,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <div class="row mt-5">
 
   <div class="col-3 col-sm-3 text-center">
-    <a routerLink="/"><i class="fa fa-car"></i></a>
+    <a routerLink="goTo('/welcome')"><i class="fa fa-car"></i></a>
   </div>
 
   <!-- <div class="row"> -->
@@ -11,11 +11,11 @@
         <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">List</button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" routerLink="/">Home</a>
-          <a class="dropdown-item" routerLink="/details">Product</a>
-          <a class="dropdown-item" routerLink="/details">Product Detail</a>
-          <a class="dropdown-item"routerLink="/registration">Registration</a>
-          <a class="dropdown-item" routerLink="/contacts">Contact</a>
+          <a class="dropdown-item" routerLink="goTo('/welcome')">Home</a>
+          <a class="dropdown-item" routerLink="goTo('/welcome/product')">Product</a>
+          <a class="dropdown-item" routerLink="goTo('/welcome/productdetail')">Product Detail</a>
+          <a class="dropdown-item"routerLink="goTo('/welcome/registration')">Registration</a>
+          <a class="dropdown-item" routerLink="goTo('/welcome/contacts')">Contact</a>
           <div role="separator" class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Separated link</a>
         </div>
@@ -65,7 +65,7 @@
   <!-- </div> -->
 
   <div class="col-4 col-sm-1">account</div>
-  <div class="col-4 col-sm-1">contact</div>
+  <div class="col-4 col-sm-1"><a routerLink="goTo('/welcome/contacts')" > Contact</a></div>
   <div class="col-4 col-sm-1"><i class="fas fa-cart-arrow-down"></i></div>
 
 
@@ -89,20 +89,20 @@
       <div class="collapse navbar-collapse " id="collapseExample" [ngbCollapse]="isCollapsed">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home
+            <a class="nav-link" routerLink="goTo('/welcome')" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home
               <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/product" routerLinkActive="active">Product</a>
+            <a class="nav-link" routerLink="goTo('/welcome/product')" routerLinkActive="active">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/details" routerLinkActive="active">Product Detail</a>
+            <a class="nav-link" routerLink="goTo('/welcome/details')" routerLinkActive="active">Product Detail</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/registration" routerLinkActive="active">Registration</a>
+            <a class="nav-link" routerLink="goTo('/welcome/registration')" routerLinkActive="active">Registration</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contacts" routerLinkActive="active">Contact</a>
+            <a class="nav-link" routerLink="goTo('/welcome/contacts')" routerLinkActive="active">Contact</a>
           </li>
 
         </ul>
