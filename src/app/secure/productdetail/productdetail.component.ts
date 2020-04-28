@@ -12,7 +12,7 @@ export class ProductdetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): {
+  ngOnInit() {
     this.speaker.title = this.route.snapshot.params['t'];
     this.speaker.price = this.route.snapshot.params['p'];
     this.speaker.description= this.route.snapshot.params['d'];
