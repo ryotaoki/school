@@ -1,4 +1,4 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SecureComponent } from './secure.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -41,6 +41,8 @@ const secureRoutes: Routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(secureRoutes),
-  ]
+  ],
+  providers: [],
+  bootstrap: [SecureComponent]
 })
 export class SecureModule { }

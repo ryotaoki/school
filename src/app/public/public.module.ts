@@ -26,6 +26,8 @@ const publicRoutes: Routes = [
     CommonModule,
     FormsModule,
     CommonModule,
-  ]
+  ],
+  providers: [],
+  bootstrap: [PublicComponent]
 })
 export class PublicModule { }
