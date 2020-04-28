@@ -7,8 +7,16 @@ import { ProductdetailComponent } from './productdetail/productdetail.component'
 import { ContactComponent } from './contact/contact.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { BuyComponent } from './buy/buy.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { FormGroup, FormControl, Validators } from '@angular/forms';
+// import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+// what this?
+import { MessageService } from 'primeng/api';
+
+
+
 
 
 const secureRoutes: Routes = [
@@ -23,7 +31,7 @@ const secureRoutes: Routes = [
 
   ]}
 
-]
+];
 
 
 
@@ -41,8 +49,12 @@ const secureRoutes: Routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(secureRoutes),
+    NgbModule,
+    // FormGroup,
+     // FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [SecureComponent]
 })
 export class SecureModule { }

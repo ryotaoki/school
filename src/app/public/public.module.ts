@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { PublicComponent } from './public.component';
 
+
 const publicRoutes: Routes = [
   {path : '', component : LoginComponent},
   {path : 'register', component : RegistrationComponent}
@@ -26,6 +27,7 @@ const publicRoutes: Routes = [
     CommonModule,
     FormsModule,
     CommonModule,
+    
   ],
   providers: [],
   bootstrap: [PublicComponent]
