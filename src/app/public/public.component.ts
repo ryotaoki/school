@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import{NgForm} from '@angular/forms';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-public',
@@ -7,7 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild("f") frm: NgForm;
+  constructor(private router: Router) { }
+
+  loginUser(){
+
+    console.log(this.frm);
+    console.log(this.frm.invalid);
+    console.log(this.frm.valid);
+     if(this.frm.value.email =="ryota@gmail.com" && this.frm.value.password =="abcd"){
+        this.router.navigate(['/welcome']);
+        } else {
+         alert("wrong crendential")
+       }
+
+  }
+
+
+
+  
 
   ngOnInit(): void {
   }
