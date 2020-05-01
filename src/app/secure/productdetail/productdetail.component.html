@@ -5,16 +5,16 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="assets/img/download-1.jpg" class="d-block w-100" alt="...">
+                        <img [src]="speaker.img" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="assets/img/download-2.jpg" class="d-block w-100" alt="...">
+                        <img [src]="speaker.img" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="assets/img/download-3.jpg" class="d-block w-100" alt="...">
+                        <img [src]="speaker.img" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="assets/img/download-4.jpg" class="d-block w-100" alt="...">
+                        <img [src]="speaker.img" class="d-block w-100" alt="...">
                       </div>
 
                     </div>
@@ -33,7 +33,7 @@
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                           <h5 class="card-title">{{speaker.title}}</h5>
-                          <h6 class="card-subtitle mb-2 text-muted price">Price- {{speaker.price}}</h6>
+                          <h6 class="card-subtitle mb-2 text-muted price">Price- {{speaker.price}} </h6>
                           <p class="card-text">Product detail- {{speaker.description}}</p>
                           <a href="#" class="card-link">Card link</a>
                           <a href="#" class="card-link">Another link</a>

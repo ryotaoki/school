@@ -2,13 +2,13 @@
     <div class="col-12 mt-1 mb-2">
         <p> you want to search:{{Myresearch}}</p>
         <button class="btn btn-outline-info" (click)="delete()">Delete</button>
-        <select name="search" id="" [(ngModel)]="category">
-            <option value="speaker">speaker</option>
+        <select name="category" id="" [(ngModel)]="prodService.category">
+            <option value="speakers">speaker</option>
             <option value="phones">phones</option>
             <option value="books">books</option>
   
         </select>
-        {{category}}
+        {{prodService.category}}
   
   
      <form class="form-inline float-right">

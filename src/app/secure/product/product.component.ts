@@ -13,7 +13,9 @@ export class ProductComponent{
   size = 16
   isOK = true;
 
-  @Input() speaker :{title: string, description: string, price: string, quantity: number};
+//   @Input() speaker :{title: string, description: string, price: string, quantity: number};
+@Input() speaker; 
+
 
   increase(){
     this.size++;

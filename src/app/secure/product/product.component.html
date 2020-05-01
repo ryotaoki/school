@@ -1,6 +1,6 @@
 <!-- <ng-template [ngIf]="quantity"> -->
   <div  *ngIf="speaker.quantity >0; else outOfsale" class="card">
-    <img src="imgs/sell_buy_logo.jpg" class="card-img-top" alt="product">
+    <img [src]="speaker.img" class="card-img-top" alt="product">
     <div class="card-body">
       <button class="btn btn-inline" (click)="increase()">increase </button>
       <button class="btn btn-inline" (click)="decrease()">decrease</button>
@@ -11,7 +11,9 @@
       <!-- <a routerLink="/details" class="btn btn-primary">See details</a>   8 [innerHTML]="title" -->
       <p class="card-text">remaining quantity {{speaker.quantity}}</p>
 
-      <button [routerLink]="['/welcome/details/title', speaker.title, 'price', speaker.price , 'description', speaker.description, 'quantity', speaker.quantity]" class="btn btn-primary">See details</button>
+      <!-- <button [routerLink]="['/welcome/details/title', speaker.title, 'price', speaker.price , 'description', speaker.description, 'quantity', speaker.quantity]" class="btn btn-primary">See details</button> -->
+      <button [routerLink]="['/welcome/details/', speaker.id ]" class="btn btn-primary">See details</button>
+
       <button class="btn btn-primary" [disabled]="checkAvailability() && speaker.quantity == 0"
         (click)="buy($event)">Buy-</button>
 

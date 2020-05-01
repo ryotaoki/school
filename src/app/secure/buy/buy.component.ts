@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-buy',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public prodService: ProductService) { }
 
   Myresearch='';
-  category='speaker';
+  // category='speaker';
 
   delete(){
     this.Myresearch = '';
