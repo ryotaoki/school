@@ -13,11 +13,11 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" (click)="goTo('/welcome')">Home</a>
           <a class="dropdown-item" routerLink="goTo('/welcome/product')">Product</a>
-          <a class="dropdown-item" routerLink="goTo('/welcome/productdetail')">Product Detail</a>
-          <a class="dropdown-item"routerLink="goTo('/welcome/registration')">Registration</a>
+          <!-- <a class="dropdown-item" routerLink="goTo('/welcome/productdetail')">Product Detail</a> -->
+          <a class="dropdown-item" routerLink="goTo('/welcome/registration')">Registration</a>
           <a class="dropdown-item" (click)="goTo('/welcome/contact')">Contact</a>
           <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
+          <!-- <a class="dropdown-item" href="#">Separated link</a> -->
         </div>
       </div>
       <input type="text" class="form-control" aria-label="Text input with dropdown button">
@@ -66,8 +66,8 @@
 
   <div class="col-4 col-sm-1">account</div>
   <!-- this is working -->
-  <div class="col-4 col-sm-1"><a (click)="goTo('/welcome/contact')" > Contact</a></div>
-  <div class="col-4 col-sm-1"><i class="fas fa-cart-arrow-down"></i></div>
+  <div class="col-4 col-sm-1"><a (click)="goTo('/welcome/contact')"> Contact</a></div>
+  <div class="col-4 col-sm-1"><i class="fas fa-cart-arrow-down" (click)="goTo('/welcome/cart')"></i></div>
 
 
 
@@ -82,7 +82,7 @@
   <div class="col-12 ">
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-0">
       <a class="navbar-brand" href="#"></a>
-      
+
       <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
         [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
         <span class="navbar-toggler-icon"></span>
@@ -90,14 +90,41 @@
       <div class="collapse navbar-collapse " id="collapseExample" [ngbCollapse]="isCollapsed">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" (click)="goTo('/welcome')" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home
+            <a class="nav-link" (click)="goTo('/welcome')" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">Home
               <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="goTo('/welcome/product')" routerLinkActive="active">Product</a>
+            <!-- <select name="category" id="" [(ngModel)]="prodService.category">
+              <option value="speakers">speaker</option>
+              <option value="phones">phones</option>
+              <option value="books">books</option>
+    
+          </select> -->
+
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" name="category" id=""
+                [(ngModel)]="prodService.category">
+                <!-- <option value="speakers">speaker</option>
+                <option value="phones">phones</option>
+                <option value="books">books</option> -->
+                <a class="dropdown-item" value="speakers">Speaker</a>
+                <a class="dropdown-item" value="phones">phones</a>
+                <a class="dropdown-item" value="books">books</a>
+              </div>
+            </div>
+
+
+            <!-- <a class="nav-link" (click)="goTo('/welcome/product')" routerLinkActive="active">Product</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="goTo('/welcome/details')" routerLinkActive="active">Product Detail</a>
+            <a class="nav-link" (click)="goTo('/welcome/details')" routerLinkActive="active">Add Product</a>
+
+            <!-- <a class="nav-link" (click)="goTo('/welcome/details')" routerLinkActive="active">Product Detail</a> -->
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="goTo('/welcome/registration')" routerLinkActive="active">Registration</a>

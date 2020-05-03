@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductService } from '../services/product.service';
+// import { NgModule } from '@angular/core';
+
+
+
 
 
 @Component({
@@ -10,7 +15,7 @@ import { Router } from '@angular/router';
 export class TopbarComponent implements OnInit {
   public isCollapsed = false;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, public prodService: ProductService) { }
 
   goTo(link){
     this.router.navigate([link]);
