@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // what this?
 import { MessageService } from 'primeng/api';
 import {ProductService} from './services/product.service';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 
 
@@ -29,6 +30,7 @@ const secureRoutes: Routes = [
 
     // ]},
     {path : 'contact', component: ContactComponent},
+    {path : 'addproduct', component: AddproductComponent},
    
     
 
@@ -46,6 +48,7 @@ const secureRoutes: Routes = [
     ProductdetailComponent,
     ProductlistComponent,
     ContactComponent,
+    AddproductComponent,
     // BuyComponent,
   ],
   imports: [

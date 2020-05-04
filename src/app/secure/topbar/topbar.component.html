@@ -12,7 +12,7 @@
           aria-haspopup="true" aria-expanded="false">List</button>
         <div class="dropdown-menu">
           <a class="dropdown-item" (click)="goTo('/welcome')">Home</a>
-          <a class="dropdown-item" routerLink="goTo('/welcome/product')">Product</a>
+          <a class="dropdown-item" (click)="goTo('/welcome/addproduct')">Add Product</a>
           <!-- <a class="dropdown-item" routerLink="goTo('/welcome/productdetail')">Product Detail</a> -->
           <a class="dropdown-item" routerLink="goTo('/welcome/registration')">Registration</a>
           <a class="dropdown-item" (click)="goTo('/welcome/contact')">Contact</a>
@@ -102,27 +102,36 @@
     
           </select> -->
 
-            <div class="dropdown">
+
+          <select class="form-control" name="category" id="" [(ngModel)]="prodService.category">
+            
+            <option value="speakers">speaker</option>
+              <option value="phones">phones</option>
+              <option value="books">books</option>
+
+          </select>
+
+            <!-- <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown button
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" name="category" id=""
-                [(ngModel)]="prodService.category">
+                [(ngModel)]="prodService.category"> -->
                 <!-- <option value="speakers">speaker</option>
                 <option value="phones">phones</option>
                 <option value="books">books</option> -->
-                <a class="dropdown-item" value="speakers">Speaker</a>
-                <a class="dropdown-item" value="phones">phones</a>
+                <!-- <a class="dropdown-item" value="speakers">Speaker</a> -->
+                <!-- <a class="dropdown-item" value="phones">phones</a>
                 <a class="dropdown-item" value="books">books</a>
               </div>
-            </div>
+            </div> -->
 
 
             <!-- <a class="nav-link" (click)="goTo('/welcome/product')" routerLinkActive="active">Product</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="goTo('/welcome/details')" routerLinkActive="active">Add Product</a>
+            <a class="nav-link" (click)="goTo('/welcome/addproduct')" routerLinkActive="active">Add Product</a>
 
             <!-- <a class="nav-link" (click)="goTo('/welcome/details')" routerLinkActive="active">Product Detail</a> -->
           </li>

@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// import { AddproductComponent } from './secure/addproduct/addproduct.component';
 // import { CartComponent } from './secure/cart/cart.component';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    // AddproductComponent,
     // CartComponent,
     
   ],
