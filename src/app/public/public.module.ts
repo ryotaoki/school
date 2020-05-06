@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegistrationComponent } from './registration/registration.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { PublicComponent } from './public.component';
 
 
@@ -27,6 +27,7 @@ const publicRoutes: Routes = [
     CommonModule,
     FormsModule,
     CommonModule,
+    ReactiveFormsModule,
     
   ],
   providers: [],
