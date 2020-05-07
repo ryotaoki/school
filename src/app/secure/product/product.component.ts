@@ -15,6 +15,7 @@ export class ProductComponent{
 
 //   @Input() speaker :{title: string, description: string, price: string, quantity: number};
 @Input() speaker; 
+@Input() category;
 
 
   increase(){

@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MessageService } from 'primeng/api';
 import {ProductService} from './services/product.service';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import{HttpClientModule} from '@angular/common/http';
 
 
 
@@ -26,7 +27,7 @@ const secureRoutes: Routes = [
     // {path : '', component: BuyComponent, children :[ 
       {path: '', component: ProductlistComponent},
       // { path : 'details/title/:t/price/:p/description/:d/quantity/:q' , component : ProductdetailComponent},
-      { path : 'details/:id' , component : ProductdetailComponent},
+      { path : 'details/:cat/:id' , component : ProductdetailComponent},
 
     // ]},
     {path : 'contact', component: ContactComponent},
@@ -59,6 +60,7 @@ const secureRoutes: Routes = [
     // FormGroup,
      // FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [MessageService, ProductService],
   bootstrap: [SecureComponent]

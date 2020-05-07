@@ -13,9 +13,15 @@ export class ProductlistComponent implements OnInit {
   booksList;
 
   constructor(public prodService : ProductService) { 
-    this.speakerList = this.prodService.speakers;
-    this.phonesList = this.prodService.phones;
-    this.booksList = this.prodService.books;
+    // this.speakerList = this.prodService.speakers;
+    // this.phonesList = this.prodService.phones;
+    // this.booksList = this.prodService.books;
+
+    this.prodService.getProducts().subscribe((data: any) =>{
+      this.speakerList =data.speakers;
+      this.phonesList= data.phones;
+      this.booksList= data.books;
+    });
 
   }
 

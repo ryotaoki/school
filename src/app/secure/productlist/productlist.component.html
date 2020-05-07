@@ -2,19 +2,19 @@
   <div class="row" [ngSwitch]="prodService.category">
     <ng-container *ngSwitchCase="'phones'">
       <div *ngFor="let i of phonesList" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-2">
-        <app-product [speaker]="i"></app-product>
+        <app-product [speaker]="i" [category]="'phones'"></app-product>
       </div>
 
     </ng-container>
     <ng-container *ngSwitchCase="'books'">
       <div *ngFor="let x of booksList" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-2">
-        <app-product [speaker]="x"></app-product>
+        <app-product [speaker]="x" [category]="'books'"></app-product>
       </div>
 
     </ng-container>
     <ng-container *ngSwitchDefault>
       <div *ngFor="let y of speakerList; let i = index" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-2">
-        <app-product [speaker]="y"></app-product>
+        <app-product [speaker]="y" [category]="'speakers'"></app-product>
       </div>
 
     </ng-container>

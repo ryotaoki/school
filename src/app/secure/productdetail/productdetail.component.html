@@ -1,7 +1,7 @@
 <!-- <div class="row"> -->
     <!-- <div class="col-12 "> -->
         <div class="row mt-3">
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-sm-4" *ngIf="speaker">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -29,7 +29,7 @@
                   </div>
             </div>
             <!-- <div class="row"> -->
-                <div class="col-sm-4">
+                <div class="col-sm-4" *ngIf="speaker">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                           <h5 class="card-title">{{speaker.title}}</h5>
@@ -44,7 +44,7 @@
 
             <!-- </div> -->
             <!-- <div class="row"> -->
-                <div class="col-sm-4">
+                <div class="col-sm-4" *ngIf="speaker">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                           <h5 class="card-title">{{speaker.title}} Information </h5>
@@ -70,7 +70,7 @@
 <!-- </div> -->
 
 <div class="row">
-    <div class="col">
+    <div class="col" *ngIf="speaker">
         <h5>Item detail</h5>
         <table class="table table-hover">
             <thead>

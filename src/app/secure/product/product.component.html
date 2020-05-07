@@ -12,7 +12,7 @@
       <p class="card-text">remaining quantity {{speaker.quantity}}</p>
 
       <!-- <button [routerLink]="['/welcome/details/title', speaker.title, 'price', speaker.price , 'description', speaker.description, 'quantity', speaker.quantity]" class="btn btn-primary">See details</button> -->
-      <button [routerLink]="['/welcome/details/', speaker.id ]" class="btn btn-primary">See details</button>
+      <button [routerLink]="['/welcome/details/', category, speaker.id ]" class="btn btn-primary">See details</button>
 
       <button class="btn btn-primary" [disabled]="checkAvailability() && speaker.quantity == 0"
         (click)="buy($event)">Buy-</button>
