@@ -17,6 +17,10 @@ export class TopbarComponent implements OnInit {
   
   constructor(private router: Router, public prodService: ProductService) { }
 
+  setCategory(category){
+    this.prodService.category = category;
+    
+  }
   goTo(link){
     this.router.navigate([link]);
 
